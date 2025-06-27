@@ -2,126 +2,154 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Abhishek Behal | Data Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abhishek Behal | Data Analyst Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 0;
-      scroll-behavior: smooth;
-      background-color: #fff;
-      color: #000;
+      font-family: 'Inter', sans-serif;
+      background-color: #0d1117;
+      color: #c9d1d9;
     }
-
-    header, section {
-      padding: 3rem 1rem;
+    header {
+      padding: 2rem;
       text-align: center;
     }
-
-    #projects .card, #blog article {
-      border: 1px solid #ddd;
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #58a6ff;
+      margin-bottom: 1rem;
+    }
+    header h1 {
+      font-size: 2.5rem;
+    }
+    .tagline {
+      font-size: 1.2rem;
+      color: #58a6ff;
+    }
+    .bio {
+      max-width: 600px;
+      margin: 1rem auto;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .project-card {
+      background-color: #161b22;
       border-radius: 10px;
       padding: 1rem;
-      margin: 1rem auto;
-      max-width: 800px;
+      width: 300px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+      transition: transform 0.3s ease;
     }
-
-    a {
-      color: #007bff;
-      text-decoration: none;
+    .project-card:hover {
+      transform: scale(1.05);
     }
-
-    a:hover {
-      opacity: 0.8;
+    .project-title {
+      font-weight: 600;
+      font-size: 1.2rem;
+      color: #58a6ff;
     }
-
+    .project-desc {
+      font-size: 0.95rem;
+      margin: 0.5rem 0;
+    }
+    .project-tech {
+      font-size: 0.85rem;
+      color: #8b949e;
+    }
     footer {
-      background: #222;
+      text-align: center;
+      padding: 2rem;
+    }
+    .socials a {
+      color: #58a6ff;
+      text-decoration: none;
+      margin: 0 1rem;
+    }
+    .resume-button {
+      background-color: #238636;
       color: white;
-      padding: 1rem;
-    }
-
-    .dark-mode {
-      background-color: #121212;
-      color: #f1f1f1;
-    }
-
-    .dark-mode a {
-      color: #9ecfff;
-    }
-
-    .dark-toggle {
-      position: fixed;
-      top: 10px;
-      right: 10px;
-      padding: 8px 12px;
-      background: #222;
-      color: #fff;
+      padding: 0.5rem 1rem;
       border: none;
       border-radius: 5px;
       cursor: pointer;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    @media (max-width: 768px) {
+      .projects {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
-  <script>
-    function toggleDarkMode() {
-      document.body.classList.toggle("dark-mode");
-    }
-  </script>
 </head>
-
 <body>
-  <button class="dark-toggle" onclick="toggleDarkMode()">🌓 Dark Mode</button>
-
-  <!-- Hero -->
-  <header style="background:#f0f8ff;">
+  <header>
+    <img src=  "New Pic.png" class="profile-pic">
     <h1>Abhishek Behal</h1>
-    <p>Data Analyst | Power BI • SQL • Excel • Python</p>
-    <a href="#projects">See My Work</a>
+    <p class="tagline">Data Analyst | Transforming Data into Decisions</p>
+    <p class="bio">
+      A business-savvy data analyst with a sharp analytical mindset and 4+ years of client engagement experience. Combining entrepreneurship with hands-on data skills, I specialize in converting raw datasets into compelling insights using Excel, Power BI, SQL, and Python. Passionate about driving decisions through data.
+    </p>
+    <a class="resume-button" href="C:\Users\Abhishek\Downloads\Abhishek_Behal_Resume v.4.pdf" download>Download Resume</a>
   </header>
 
-  <!-- Projects -->
-  <section id="projects">
-    <h2>Featured Projects</h2>
-    <div class="card">
-      <h3>Jeans Purchase Analysis</h3>
-      <p>Analyzed pricing strategy and trends using Excel & Power BI.</p>
-      <a href="https://github.com/abhishekbehal/jeans-purchase-analysis" target="_blank">View Project</a>
+  <section class="projects">
+    <div class="project-card">
+      <p class="project-title">Instagram User Engagement Analysis</p>
+      <p class="project-desc">Identified top-performing posts, bots, and hashtags using MySQL queries.</p>
+      <p class="project-tech">Tools: SQL, MySQL Workbench</p>
     </div>
-    <div class="card">
-      <h3>Instagram User Analytics</h3>
-      <p>SQL + Power BI project to analyze user engagement and behavior.</p>
-      <a href="https://github.com/abhishekbehal/instagram-analytics" target="_blank">View Project</a>
+    <div class="project-card">
+      <p class="project-title">IMDB Movie Analysis</p>
+      <p class="project-desc">Explored 7,000+ movies to analyze genres, ratings, and durations.</p>
+      <p class="project-tech">Tools: Python, Pandas, Matplotlib, Seaborn</p>
     </div>
-  </section>
+    <div class="project-card">
+      <p class="project-title">Bank Loan Default Analysis</p>
+      <p class="project-desc">Flagged high-risk applicants and recommended new loan policies.</p>
+      <p class="project-tech">Tools: Python, Pandas, Seaborn</p>
+    </div>
+    <div class="project-card">
+      <p class="project-title">Hiring Process Analytics</p>
+      <p class="project-desc">Analyzed hiring data to uncover gender ratios and salary trends.</p>
+      <p class="project-tech">Tools: Excel</p>
+    </div>
+    <div class="project-card">
+      <p class="project-title">Car Pricing & Profitability Analysis</p>
+      <p class="project-desc">Built regression model to determine key price drivers.</p>
+      <p class="project-tech">Tools: Excel, Regression</p>
+    </div>
+    <div class="project-card">
+      <p class="project-title">Call Volume Trend Analysis</p>
+      <p class="project-desc">Optimized call center staffing and reduced abandonment rate.</p>
+      <p class="project-tech">Tools: Excel</p>
+    </div>
+    <div class="project-card">
+      <p class="project-title">Data-Driven Jeans Purchase Decision</p>
+      <p class="project-desc">Compared brands and recommended purchases based on market research.</p>
+      <p class="project-tech">Tools: Excel</p>
+    </div>
+      </section>
 
-  <!-- Power BI Dashboard -->
-  <section id="dashboard">
-    <h2>Live Dashboard</h2>
-    <p>Explore insights with interactive filters</p>
-    <iframe width="900" height="600" src="https://app.powerbi.com/view?r=YOUR_EMBED_LINK" frameborder="0" allowfullscreen></iframe>
-  </section>
-
-  <!-- Blog -->
-  <section id="blog" style="background:#f9f9f9;">
-    <h2>Blog & Insights</h2>
-    <article>
-      <h3>Using Data to Reduce Food Waste in Retail</h3>
-      <p>How I applied Power BI to optimize daily stock & sales. <a href="https://yourbloglink1.com" target="_blank">Read more →</a></p>
-    </article>
-    <article>
-      <h3>SQL Tricks from My Instagram Project</h3>
-      <p>Real examples of grouping, filtering, and joins. <a href="https://yourbloglink2.com" target="_blank">Read more →</a></p>
-    </article>
-  </section>
-
-  <!-- Footer -->
   <footer>
-    <p>📧 abhishekbehal@gmail.com</p>
-    <p>
-      <a href="https://linkedin.com/in/abhishekbehal" target="_blank">LinkedIn</a> |
-      <a href="https://github.com/abhishekbehal" target="_blank">GitHub</a>
-    </p>
+    <div class="socials">
+      <a href="mailto:abhishekb.development@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/abhishek-behal-368176186" target="_blank">LinkedIn</a>
+      <a href="https://github.com/AbhishekBehal" target="_blank">GitHub</a>
+    </div>
   </footer>
 </body>
 </html>
