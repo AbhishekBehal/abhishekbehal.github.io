@@ -103,7 +103,7 @@
     <p class="bio">
       A business-savvy data analyst with a sharp analytical mindset and 4+ years of client engagement experience. Combining entrepreneurship with hands-on data skills, I specialize in converting raw datasets into compelling insights using Excel, Power BI, SQL, and Python. Passionate about driving decisions through data.
     </p>
-    <a class="resume-button" href="C:\Users\Abhishek\Downloads\Resume-Abhishek_Behal.pdf" download>Download Resume</a>
+    <a class="resume-button" href="Resume-Abhishek_Behal.pdf" download>Download Resume</a>
   </header>
 
   <section class="projects">
